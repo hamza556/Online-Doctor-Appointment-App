@@ -594,12 +594,12 @@
     <Content Include="user registration\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
     <Content Include="user registration\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
     <Content Include="Views\user\register.cshtml" />
-    <Content Include="Views\admin_login\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutPageAdmin.cshtml" />
     <Content Include="Views\admin_login\Index.cshtml" />
     <Content Include="Views\admin_login\Show.cshtml" />
     <Content Include="Views\admin_login\Doctrlist.cshtml" />
     <Content Include="Views\admin_login\Userlist.cshtml" />
+    <Content Include="Views\admin_login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

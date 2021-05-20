@@ -1,119 +1,99 @@
 ﻿@model Doctorsapointment.Models.Admin
 
 @{
-    Layout = null;
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<
 
-<html>
-<head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+   
+    <div class="content">
+        <div class="container-fluid">
 
-    <!-- Title Page-->
-    <title>Register Forms </title>
-
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
-    <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-
-    <!-- Main CSS-->
-    <link href="~/user registration/css/main.css" rel="stylesheet" media="all">
-
-    <meta name="viewport" content="width=device-width" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Login</title>
-</head>
-<body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-
-    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-        <div class="wrapper wrapper--w680">
-            <div class="card card-1">
-                <div class="card-heading"></div>
-                <div class="card-body">
-                    <h2 class="title">Registration Info</h2>
-                    <form method="POST">
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="input-group">
-                            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "input--style-1", @type = "text", @placeholder = "NAME" } })
-                            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
-                            @*<input class="input--style-1" type="text" placeholder="NAME" name="name">*@
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <!-- Login Tab Content -->
+                    <div class="account-content">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-7 col-lg-6 login-left">
+                                <img src="~/Content/template/img/login-banner.png" class="img-fluid" alt="Doccure Login">
+                            </div>
+                            <div class="col-md-12 col-lg-6 login-right">
+                                <div class="login-header">
+                                    <h3>Admin <span>Login</span></h3>
+                                </div>
+                                <form action="https://dreamguys.co.in/demo/doccure/index.html">
+                                    <div class="form-group form-focus">
+                                        @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control floating" } })
+                                        @Html.ValidationMessageFor(model => model.email, "", new { @class = "focus-label" })
+                                        @*<input type="email" class="form-control floating">*@
+                                        <label class="focus-label">Email</label>
+                                    </div>
+                                    <div class="form-group form-focus">
+                                        @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control floating" } })
+                                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "focus-label" })
+                                        @*<input type="password" class="form-control floating">*@
+                                        <label class="focus-label">Password</label>
+                                    </div>
+                                    @*<div class="text-right">
+                            <a class="forgot-link" href="forgot-password.html">Forgot Password ?</a>
+                        </div>*@
+                                    <button class="btn btn-primary btn-block btn-lg login-btn" type="submit">Login</button>
+                                    @*<div class="login-or">
+                            <span class="or-line"></span>
+                            <span class="span-or">or</span>
                         </div>
-                        <div class="input-group">
-                            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "input--style-1", @type = "password", @placeholder = "Password" } })
-                            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
-                            @*<input class="input--style-1" type="text" placeholder="NAME" name="name">*@
+                        <div class="row form-row social-login">
+                            <div class="col-6">
+                                <a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f mr-1"></i> Login</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-google btn-block"><i class="fab fa-google mr-1"></i> Login</a>
+                            </div>
                         </div>
-
-
-
-
-                        <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="submit">Submit</button>
+                        <div class="text-center dont-have">Don’t have an account? <a href="register.html">Register</a></div>*@
+                                </form>
+                            </div>
                         </div>
-                    </form>
+                    </div>
+                    <!-- /Login Tab Content -->
+
                 </div>
             </div>
+
         </div>
+
     </div>
-    <!-- Jquery JS-->
-    <script src="~/user registration/vendor/jquery/jquery.min.js"></script>
-    <!-- Vendor JS-->
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/datepicker/moment.min.js"></script>
-    <script src="vendor/datepicker/daterangepicker.js"></script>
-
-    <!-- Main JS-->
-    <script src="~/user registration/js/global.js"></script>
-
-
-    @*@using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-
-        <div class="form-horizontal">
-            <h4>Admin</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
+    
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
         </div>
-    }*@
+    </div>*@
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
-</body>
-</html>
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    @*<div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>*@
+</div>
+    }
+
+<
