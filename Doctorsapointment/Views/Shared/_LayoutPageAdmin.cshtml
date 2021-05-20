@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="~/Content/Admin/css/normalize.css">
     <!-- meanmenu icon CSS
         ============================================ -->
-    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="~/Content/Admin/css/meanmenu.min.css">
     <!-- main CSS
         ============================================ -->
     <link rel="stylesheet" href="~/Content/Admin/css/main.css">
@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="~/Content/Admin/css/calendar/fullcalendar.print.min.css">
     <!-- style CSS
         ============================================ -->
-    <link rel="stylesheet" href="~/Content/Admin/style.css">
+    <link rel="stylesheet" href="~/Content/Admin/css/style.css">
     <!-- responsive CSS
         ============================================ -->
     <link rel="stylesheet" href="~/Content/Admin/css/responsive.css">
@@ -82,21 +82,21 @@
                         <li class="active">
                             <a class="has-arrow" href="index.html">
                                 <span class="educate-icon educate-home icon-wrap"></span>
-                                <span class="mini-click-non">Education</span>
+                                <span class="mini-click-non">Doctor</span>
                             </a>
                             <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard v.1</span></a></li>
+                                <li><a title="Doctors List" href="@Url.Action("Doctrlist","admin_login")"><span class="mini-sub-pro">Doctors List</span></a></li>
                                
                             </ul>
                         </li>
                        
                         <li>
-                            <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Professors</span></a>
+                            <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Users</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Professors" href="all-professors.html"><span class="mini-sub-pro">All Professors</span></a></li>
-                                <li><a title="Add Professor" href="add-professor.html"><span class="mini-sub-pro">Add Professor</span></a></li>
+                                <li><a title="All Professors" href="@Url.Action("Userlist","admin_login")"><span class="mini-sub-pro">All Users</span></a></li>
+                                @*<li><a title="Add Professor" href="add-professor.html"><span class="mini-sub-pro">Add Professor</span></a></li>
                                 <li><a title="Edit Professor" href="edit-professor.html"><span class="mini-sub-pro">Edit Professor</span></a></li>
-                                <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Professor Profile</span></a></li>
+                                <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Professor Profile</span></a></li>*@
                             </ul>
                         </li>
                       
@@ -135,7 +135,7 @@
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
                                                 <li class="nav-item">
-                                                    <a href="#" class="nav-link">Home</a>
+                                                    <a href="#e" class="nav-link">Home</a>
                                                 </li>
                                                 <li class="nav-item">
                                                     <a href="#" class="nav-link">About</a>
@@ -161,13 +161,13 @@
                                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                         <div class="header-right-info">
                                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                                                <li class="nav-item dropdown">
+                                                <!--<li class="nav-item dropdown">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-message edu-chat-pro" aria-hidden="true"></i><span class="indicator-ms"></span></a>
                                                     <div role="menu" class="author-message-top dropdown-menu animated zoomIn">
                                                         <div class="message-single-top">
                                                             <h1>Message</h1>
-                                                        </div>
-                                                        <ul class="message-menu">
+                                                        </div>-->
+                                                        @*<ul class="message-menu">
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="message-img">
@@ -216,19 +216,19 @@
                                                                     </div>
                                                                 </a>
                                                             </li>
-                                                        </ul>
-                                                        <div class="message-view">
+                                                        </ul>*@
+                                                        <!--<div class="message-view">
                                                             <a href="#">View All Messages</a>
                                                         </div>
                                                     </div>
-                                                </li>
-                                                <li class="nav-item">
+                                                </li>-->
+                                                <!--<li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i><span class="indicator-nt"></span></a>
                                                     <div role="menu" class="notification-author dropdown-menu animated zoomIn">
                                                         <div class="notification-single-top">
                                                             <h1>Notifications</h1>
-                                                        </div>
-                                                        <ul class="notification-menu">
+                                                        </div>-->
+                                                        @*<ul class="notification-menu">
                                                             <li>
                                                                 <a href="#">
                                                                     <div class="notification-icon">
@@ -277,20 +277,20 @@
                                                                     </div>
                                                                 </a>
                                                             </li>
-                                                        </ul>
-                                                        <div class="notification-view">
+                                                        </ul>*@
+                                                        <!--<div class="notification-view">
                                                             <a href="#">View All Notification</a>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li>-->
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                         <img src="img/product/pro4.jpg" alt="" />
-                                                        <span class="admin-name">Prof.Anderson</span>
+                                                        <span class="admin-name">Admin</span>
                                                         <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                                     </a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                        <li>
+                                                        @*<li>
                                                             <a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
                                                         </li>
                                                         <li>
@@ -298,7 +298,7 @@
                                                         </li>
                                                         <li>
                                                             <a href="#"><span class="edu-icon edu-money author-log-ic"></span>User Billing</a>
-                                                        </li>
+                                                        </li>*@
                                                         <li>
                                                             <a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
                                                         </li>
@@ -768,7 +768,7 @@
                                         <li>
                                             <a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul class="collapse dropdown-header-top">
-                                                <li><a href="index.html">Dashboard v.1</a></li>
+                                                <li><a href="index.html">Doctors List</a></li>
                                             </ul>
                                         </li>
 
@@ -818,7 +818,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                            @*<p>Copyright © 2018. All rights reserved. by </p>*@
                         </div>
                     </div>
                 </div>

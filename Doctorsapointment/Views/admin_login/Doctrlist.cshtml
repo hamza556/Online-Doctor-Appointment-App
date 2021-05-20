@@ -1,0 +1,161 @@
+﻿@model IEnumerable<Doctorsapointment.Models.doctor>
+
+@{
+    ViewBag.Title = "Doctrlist";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="product-status mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="product-status-wrap drp-lst">
+                    <h4>Doctors List</h4>
+                    <div class="add-product">
+                        <a href="add-department.html">Add Departments</a>
+                    </div>
+                    <div class="asset-inner">
+                        <table>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.mail)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.phone)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.address)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.designation)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.speciality)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.pmdc)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.password)
+                                </th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.mail)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.phone)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.designation)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.speciality)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.pmdc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.password)
+                            </td>
+                            @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Regid }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Regid }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Regid })
+        </td>*@
+                            <td>
+                                <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                            }
+                        </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.designation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.speciality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pmdc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.designation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.speciality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pmdc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.password)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Regid }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Regid }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Regid })
+                </td>
+            </tr>
+        }
+
+    </table>*@
